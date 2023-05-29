@@ -1,34 +1,6 @@
 node('kubeagent') {
 
 
-      stage('Preparation Stage') {
-            container('openjdk') {
-                stage('Build and push to docker hub') {
-                  
-                  git (url:'https://github.com/moh-amer/DevOps_Project_App',branch:'main')
-                    
-                }
-
-                 stage("Compiling and Packaging"){
-           
-                sh "./app/mvnw compile"
-                sh "./app/mvnw clean package"
-        
-
-             }
-
-        stage("Testing"){
-            
-                    junit 'app/target/surefire-reports/*.xml'
-                    archiveArtifacts 'app/target/*.jar'
-            
-        }
-
-
-            }
-        }
-
-
         stage('CI : Build Image') {
             container('kaniko') {
                 stage('Build and push to docker hub') {
@@ -36,8 +8,8 @@ node('kubeagent') {
                         script{
                             sh '''
                             
-                            /kaniko/executor --context dir://.
-                            --destination pharogrammer/petclinic-app:${BUILD_NUMBER}
+                            /kaniko/executor --context git://github.com/moh-amer/DevOps_Project_App \
+                            --destination pharogrammer/bakehouse:${BUILD_NUMBER}
                             
                             '''
                         }
@@ -67,7 +39,7 @@ node('kubeagent') {
                 sh "git config --global --add safe.directory /home/jenkins/agent/workspace/mypipeline"
                 sh "git config --global user.email 'medodeth666@gmail.com' "
                 sh "git config --global user.name 'moh-amer' "
-                sh "sed -i 's/\\(tag: \\).*/\\1 ${BUILD_NUMBER}/' app-deployment/values.yaml"
+                sh "sed -i 's/\\(version: \\).*/\\1 ${BUILD_NUMBER}/' deployment/values.yaml"
                 sh "git add . "
                 sh "git commit -m 'Editing Version to ${BUILD_NUMBER}'"
                  
@@ -82,7 +54,7 @@ node('kubeagent') {
         
                   stage("Deploy the app") {
                       
-                    sh "helm upgrade --install petclinic-app ./app-deployment"
+                    sh "helm upgrade --install bakehouse-app ./bakehouse"
         }
 }
         }

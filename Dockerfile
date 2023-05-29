@@ -1,5 +1,2 @@
-FROM  openjdk:latest
-COPY app/* /root/petclinic
-WORKDIR /root/petclinic
-ENTRYPOINT java -Dserver.port=8091 -jar target/spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar
-
+FROM nginx:alpine
+COPY app/* /usr/share/nginx/html
