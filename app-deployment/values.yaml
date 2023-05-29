@@ -1,0 +1,7 @@
+appName: petclinic
+
+port: 80
+
+image:
+  name: pharogrammer/petclinic
+  tag: 1
