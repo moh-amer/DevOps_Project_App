@@ -8,7 +8,7 @@ app:
 image:
   repository: pharogrammer
   name: bakhouse
-  version:  33
+  version:  35
 
 service:
   type: LoadBalancer
