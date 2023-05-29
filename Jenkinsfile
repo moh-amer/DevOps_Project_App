@@ -2,7 +2,7 @@ node('kubeagent') {
 
 
       stage('Preparation Stage') {
-            container('jnlp') {
+            container('openjdk') {
                 stage('Build and push to docker hub') {
                   
                   git (url:'https://github.com/moh-amer/DevOps_Project_App',branch:'main')
