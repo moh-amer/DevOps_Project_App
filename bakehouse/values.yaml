@@ -1,0 +1,16 @@
+replicaCount: 3
+
+app:
+  labels:
+    app: "bakehouse"
+    env: "production"
+
+image:
+  repository: pharogrammer
+  name: bakhouse
+  version:  25
+
+service:
+  type: LoadBalancer
+  targetPort: 80
+  port: 80
