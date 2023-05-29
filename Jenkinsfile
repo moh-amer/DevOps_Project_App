@@ -34,23 +34,23 @@ node('kubeagent') {
             
         }
         
-        stage("Create artifacts or make changes") {
+        stage("Change Deployment") {
             
-                sh "git config --global --add safe.directory /home/jenkins/agent/workspace/mypipeline"
-                sh "git config --global user.email 'medodeth666@gmail.com' "
-                sh "git config --global user.name 'moh-amer' "
+                // sh "git config --global --add safe.directory /home/jenkins/agent/workspace/mypipeline"
+                // sh "git config --global user.email 'medodeth666@gmail.com' "
+                // sh "git config --global user.name 'moh-amer' "
                 sh "sed -i 's/\\(version: \\).*/\\1 ${BUILD_NUMBER}/' deployment/values.yaml"
-                sh "git add . "
-                sh "git commit -m 'Editing Version to ${BUILD_NUMBER}'"
+                // sh "git add . "
+                // sh "git commit -m 'Editing Version to ${BUILD_NUMBER}'"
                  
              }
              
-             stage("Push to Git Repository") {
-                withCredentials([gitUsernamePassword(credentialsId: 'git-hub-moh_amer', gitToolName: 'Default')]) {
-                    sh "git push -u origin main"
-                }
+            //  stage("Push to Git Repository") {
+            //     withCredentials([gitUsernamePassword(credentialsId: 'git-hub-moh_amer', gitToolName: 'Default')]) {
+            //         sh "git push -u origin main"
+            //     }
    
-        }
+            //   }
         
                   stage("Deploy the app") {
                       
