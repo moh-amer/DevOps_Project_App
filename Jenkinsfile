@@ -11,8 +11,8 @@ node('kubeagent') {
 
                  stage("Compiling and Packaging"){
            
-                sh "app/mvnw compile"
-                sh "app/mvnw clean package"
+                sh "./app/mvnw compile"
+                sh "./app/mvnw clean package"
         
 
              }
