@@ -38,7 +38,6 @@ This repository contains a project deployed using Jenkins that aims to automate 
 
 1. install kubernetes plugin
 2. configure jenkins
-3.
 
 ```
 {
@@ -61,14 +60,15 @@ kubectl create secret generic kaniko-secret --from-file=config.json --namespace=
 
 ```
 
+> ![Alt text](images/screen-kaniko.png?raw=true "Title")
+
 # Pipeline Demo:
 
 [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=xjb9A_ii8ZI)
 
 # Project Screen shots:
 
-> ![Alt text](images/site-jenkins.png?raw=true "Title")
-> ![Alt text](images/site-1.png?raw=true "Title")
+> ![Alt text](images/site-jenkins.png?raw=true "Title") > ![Alt text](images/site-1.png?raw=true "Title")
 
 ## Contact
 
