@@ -62,9 +62,11 @@ kubectl create secret generic kaniko-secret --from-file=config.json --namespace=
 
 > ![Alt text](images/screen-kaniko.png?raw=true "Title")
 
-# Pipeline Demo:
+# Pipeline Demo Video:
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=xjb9A_ii8ZI)
+https://www.youtube.com/watch?v=xjb9A_ii8ZI
+
+[![Watch the video](https://renewyourbath.com/wp-content/uploads/2015/04/video-placeholder.jpg)](https://www.youtube.com/watch?v=xjb9A_ii8ZI)
 
 # Project Screen shots:
 
