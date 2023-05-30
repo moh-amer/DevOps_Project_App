@@ -82,7 +82,7 @@ kubectl create secret generic kaniko-secret --from-file=config.json --namespace=
 > a custom deployer image with kubectl and helm to be used by jenkins slave pod to deploy my application
 > ![Alt text](images/screen-deployer-image.png?raw=true "Title")
 
-> ![Alt text](images/screen-deployer-image.png?raw=true "Title")
+> ![Alt text](images/screen-config-deployer.png?raw=true "Title")
 
 # Pipeline Demo Video:
 
