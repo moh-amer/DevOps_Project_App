@@ -84,6 +84,10 @@ kubectl create secret generic kaniko-secret --from-file=config.json --namespace=
 
 > ![Alt text](images/screen-config-deployer.png?raw=true "Title")
 
+## Configuring Github webhooks:
+
+> ![Alt text](images/screen-webhook.png?raw=true "Title")
+
 # Pipeline Demo Video:
 
 https://www.youtube.com/watch?v=xjb9A_ii8ZI
