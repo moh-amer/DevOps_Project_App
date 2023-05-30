@@ -32,7 +32,7 @@ node('kubeagent') {
                 )
                 
             
-        }
+             }
         
         stage("Change Deployment") {
             
@@ -55,7 +55,7 @@ node('kubeagent') {
                   stage("Deploy the app") {
                       
                     sh "helm upgrade --install bakehouse-app ./deployment"
+             }
         }
-}
-        }
+    }
 }
