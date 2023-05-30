@@ -29,6 +29,16 @@ This repository contains a project deployed using Jenkins that aims to automate 
 
 ![Alt text](images/cluster.jpg?raw=true "Title")
 
+# Deploy Jenkins On kubernetes Using Ansible:
+
+Run play book
+
+```
+ansible-playbook playbook.yaml
+```
+
+![Alt text](images/screen-ansible.png?raw=true "Title")
+
 ## Kaniko:
 
 > I have already used kaniko- a solution by google- to build and push docker image to docker hub
