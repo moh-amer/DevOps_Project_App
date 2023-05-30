@@ -39,6 +39,11 @@ ansible-playbook playbook.yaml
 
 ![Alt text](images/screen-ansible.png?raw=true "Title")
 
+## Installing Kubernetes plugin on jenkins and configuring it
+
+![Alt text](images/screen-install-kplugin.png?raw=true "Title")
+![Alt text](images/screen-config-plugin.png?raw=true "Title")
+
 ## Kaniko:
 
 > I have already used kaniko- a solution by google- to build and push docker image to docker hub
@@ -71,6 +76,13 @@ kubectl create secret generic kaniko-secret --from-file=config.json --namespace=
 ```
 
 > ![Alt text](images/screen-kaniko.png?raw=true "Title")
+
+## Creating a custom deployer Image:
+
+> a custom deployer image with kubectl and helm to be used by jenkins slave pod to deploy my application
+> ![Alt text](images/screen-deployer-image.png?raw=true "Title")
+
+> ![Alt text](images/screen-deployer-image.png?raw=true "Title")
 
 # Pipeline Demo Video:
 
