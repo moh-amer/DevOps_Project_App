@@ -29,6 +29,47 @@ This repository contains a project deployed using Jenkins that aims to automate 
 
 ![Alt text](images/cluster.jpg?raw=true "Title")
 
+## Kaniko:
+
+> I have already used kaniko- a solution by google- to build and push docker image to docker hub
+> ![Alt text](images/kaniko.jpg?raw=true "Title")
+
+### configure jenkins to use kaniko:
+
+1. install kubernetes plugin
+2. configure jenkins
+3.
+
+```
+{
+
+        "auths": {
+
+                "https://index.docker.io/v1/": {
+                        "auth":"cGhhcm9ncmFtbWVyOk1PSGFzZEAxMjM="
+                }
+
+        }
+}
+
+```
+
+```
+
+kubectl create secret generic kaniko-secret --from-file=config.json --namespace=jenkins
+
+
+```
+
+# Pipeline Demo:
+
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=xjb9A_ii8ZI)
+
+# Project Screen shots:
+
+> ![Alt text](images/site-jenkins.png?raw=true "Title")
+> ![Alt text](images/site-1.png?raw=true "Title")
+
 ## Contact
 
 If you have any questions or need further assistance, please feel free to contact the project maintainer:
